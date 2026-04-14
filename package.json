@@ -1,0 +1,9 @@
+{
+  "name": "checkpoint-rescue",
+  "private": true,
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "cd backend && nodemon server.js",
+    "postinstall": "cd backend && npm install"
+  }
+}
