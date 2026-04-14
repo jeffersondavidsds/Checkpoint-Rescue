@@ -42,11 +42,36 @@ Facilitar a comunicação e coordenação durante enchentes, conectando:
 - **useEffect** - Efeitos colaterais e ciclo de vida
 - **Google Maps API** - Visualização de mapas e localização
 
+### APIs Externas
+
+#### Google Maps API
+O sistema integra a **Google Maps API** para funcionalidades avançadas de localização:
+
+- **Geocoding**: Conversão de endereços em coordenadas GPS
+- **Reverse Geocoding**: Conversão de coordenadas em endereços
+- **Places API**: Busca de lugares próximos (abrigos, pontos de ajuda)
+- **Maps Tiles**: Servidor proxy para tiles do OpenStreetMap
+
+**Configuração:**
+1. Obtenha uma chave da API no [Google Cloud Console](https://console.cloud.google.com/)
+2. Ative os seguintes serviços:
+   - Geocoding API
+   - Places API
+   - Maps JavaScript API (para frontend)
+3. Configure a chave no arquivo `backend/.env`:
+   ```env
+   GOOGLE_MAPS_API_KEY=sua_chave_aqui
+   ```
+
+**Nota:** A chave da API não deve ser commitada no Git. Use o arquivo `.env` (já incluído no `.gitignore`).
+
 ### Conceitos Aplicados
 - **CRUD** (Create, Read, Update, Delete)
 - **Consumo de API REST**
 - **Autenticação e controle de acesso**
 - **Verbos HTTP** (GET, POST, PUT, DELETE)
+- **WebSockets** (Socket.IO para localização em tempo real)
+- **Integração com APIs externas** (Google Maps)
 
 ---
 
@@ -81,6 +106,16 @@ cd frontend
 npm start
 ```
 Aplicação disponível em: `http://localhost:3001`
+
+---
+
+## 📚 Documentação Adicional
+
+- **[inicio-rapido.md](inicio-rapido.md)** - Guia rápido para começar a usar o sistema
+- **[readme-instalacao.md](readme-instalacao.md)** - Instalação detalhada e configuração
+- **[readme-localizacao-tempo-real.md](readme-localizacao-tempo-real.md)** - Documentação da API de localização em tempo real
+- **[postman-examples.md](postman-examples.md)** - Exemplos de requisições no Postman
+- **[FRONTEND_SOCKET_EXAMPLE.js](FRONTEND_SOCKET_EXAMPLE.js)** - Exemplo de implementação frontend com Socket.IO
 
 ---
 
