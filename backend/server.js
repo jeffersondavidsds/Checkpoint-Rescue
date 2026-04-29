@@ -39,7 +39,12 @@ const corsOptions = {
   credentials: true,
   optionsSuccessStatus: 200
 };
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://SEU-DOMINIO.vercel.app'  // COLOQUE SEU DOMÍNIO AQUI
+  ]
+}));
 
 // ==========================================
 // MIDDLEWARES GERAIS
