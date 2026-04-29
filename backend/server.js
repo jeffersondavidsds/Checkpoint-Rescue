@@ -42,7 +42,7 @@ const corsOptions = {
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://SEU-DOMINIO.vercel.app'  // COLOQUE SEU DOMÍNIO AQUI
+    'https://checkpoint-rescue-front-back.vercel.app/'  // COLOQUE SEU DOMÍNIO AQUI
   ]
 }));
 
